@@ -491,14 +491,16 @@ body {
 
 .app__promo__subtitle {
   font-family: Noto Sans JP, sans-serif;
-  font-weight: 400;
-  font-size: 40px;
+  /*font-weight: 400;*/
+  font-weight: 300;
+  /*font-size: 40px;*/
+  font-size: 20px;
   line-height: 34px;
   color: #111;
   margin-top: 95px
 }
 
-@media (max-width:1400px) {
+/*@media (max-width:1400px) {
 	  .app__promo__subtitle {
 	  font-size: 30px;
 	}
@@ -510,6 +512,14 @@ body {
     line-height: 42px;
     margin-top: 45px
   }
+}*/
+
+@media (max-width:1023px) {
+	  .app__promo__subtitle {
+	  font-size: 15px;
+	  line-height: 30px;
+	  margin-top: 50px
+	}
 }
 
 .app__promo__desc, .app__promo__desc_custom {
@@ -517,7 +527,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 34px;
-  margin-top: 39px
+  /*margin-top: 39px*/
+  margin-top: 20px
 }
 
 @media (max-width:1400px) {
@@ -530,7 +541,8 @@ body {
   .app__promo__desc, .app__promo__desc_custom {
     font-size: 13px;
     line-height: 30px;
-    margin-top: 4px
+    /*margin-top: 4px*/
+	margin-top: 16px
   }
 }
 
