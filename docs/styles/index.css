@@ -5612,16 +5612,29 @@ body {
   display: block;
   width: 100%;
   margin-top: 45px;
+  margin-bottom: 140px;
   position: relative
 }
 
+@media (max-width:1300px) {
+  .project-single__item {
+	  margin-bottom: 109px;
+	}
+}
+
+@media (max-width:767px) {
+  .project-single__item {
+	  margin-bottom: 74px;
+	}
+}
+
 .project-single__item+.project-single__item {
-  margin-top: 140px
+  margin-bottom: 140px
 }
 
 @media (max-width:1300px) {
   .project-single__item+.project-single__item {
-	margin-top: 109px
+	margin-bottom: 109px
 	}
 }
 
@@ -5630,7 +5643,7 @@ body {
     margin-top: 35px
   }
   .project-single__item+.project-single__item {
-    margin-top: 74px
+    margin-bottom: 74px
   }
 }
 
