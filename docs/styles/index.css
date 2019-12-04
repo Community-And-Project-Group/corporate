@@ -5491,13 +5491,13 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  padding-top: 85px
+  padding-top: 65px
 }
 
 @media (max-width:767px) {
   .project-single__tabs-list {
     margin-top: -20px;
-    padding-top: 65px
+    padding-top: 45px
   }
 }
 
@@ -5611,12 +5611,18 @@ body {
 .project-single__item {
   display: block;
   width: 100%;
-  margin-top: 65px;
+  margin-top: 45px;
   position: relative
 }
 
 .project-single__item+.project-single__item {
-  margin-top: 109px
+  margin-top: 140px
+}
+
+@media (max-width:1300px) {
+  .project-single__item+.project-single__item {
+	margin-top: 109px
+	}
 }
 
 @media (max-width:767px) {
