@@ -4858,8 +4858,9 @@ body {
 .blog__item-mark {
   font-family: Noto Sans JP, sans-serif;
   font-weight: 300;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4890,7 +4891,7 @@ body {
 @media (max-width:767px) {
   .blog__item-mark {
     max-width: 41px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 14px;
     height: 41px;
     bottom: -4px;
