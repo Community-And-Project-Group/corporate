@@ -816,7 +816,7 @@ body {
 .subtitle, .subtitle__quotes {
   display: block;
   width: 100%;
-  font-family: brother_1816regular;
+  font-family: brother_1816book;
   font-size: 40px;
   line-height: 1.4;
   color: #111;
@@ -846,7 +846,8 @@ body {
 .subtitle__quotes:after, .subtitle__quotes:before {
   display: inline-block;
   vertical-align: middle;
-  font-family: brother_1816light;
+  font-weight: 100;
+  font-family: brother_1816book;
   font-size: 80px;
   line-height: .75;
   color: #111
@@ -2717,6 +2718,99 @@ body {
   }
 }
 
+.how__triangle3 {
+  position: absolute;
+  right: -31px;
+  top: 133px;
+  z-index: 20
+}
+
+@media (max-width:1399px) {
+  .how__triangle3 {
+    right: 56px;
+    top: 52px
+  }
+}
+
+@media (max-width:767px) {
+  .how__triangle3 {
+    right: auto;
+    left: 40px;
+  }
+}
+
+.how__triangle3 span {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(251, 115, 57, .1);
+  border-style: solid;
+  border-width: 0 50px 90px;
+  position: relative;
+  -webkit-animation: top100FloatHorizontal 3s ease-in-out infinite alternate, top100FloatVertical 2.5s ease-in-out infinite alternate;
+  animation: top100FloatHorizontal 3s ease-in-out infinite alternate, top100FloatVertical 2.5s ease-in-out infinite alternate
+}
+
+@-webkit-keyframes top100FloatHorizontal {
+  0% {
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0)
+  }
+  50% {
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0)
+  }
+  to {
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0)
+  }
+}
+
+@keyframes top100FloatHorizontal {
+  0% {
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0)
+  }
+  50% {
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0)
+  }
+  to {
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0)
+  }
+}
+
+@-webkit-keyframes top100FloatVertical {
+  0% {
+    top: 20px
+  }
+  50% {
+    top: -20px
+  }
+  to {
+    top: 20px
+  }
+}
+
+@keyframes top100FloatVertical {
+  0% {
+    top: 20px
+  }
+  50% {
+    top: -20px
+  }
+  to {
+    top: 20px
+  }
+}
+
+@media (max-width:767px) {
+  .how__triangle3 span {
+    border-width: 0 22px 35px
+  }
+}
+
 .how .container {
   position: relative
 }
@@ -2811,7 +2905,6 @@ body {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   position: relative;
-  z-index: 20
 }
 
 @media (max-width:767px) {
