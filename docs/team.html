@@ -28,7 +28,42 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500&display=swap&subset=japanese" rel="stylesheet">
 <link href="styles/index.css" rel="stylesheet"></head>
 <body>
-<div class="wrapper" id="wrapper">
+<div id="anim"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
+<script>
+	(function(){
+		var width = window.innerWidth;
+		var wrapper = document.getElementById('anim');
+		var breakpointName = (
+				/* sp */(width > 0 && width < 768) && 'sp' ||
+				/* md */(width > 767 && width < 992) && 'md' ||
+				/* lg */(width > 991) && 'lg'
+		);
+
+		var anim = bodymovin.loadAnimation({
+			container: wrapper,
+			animType: 'canvas',
+			path: 'team.' + breakpointName + '.json',
+			assetsPath: 'images/team/',
+			rendererSettings: {
+				preserveAspectRatio: 'xMidYMax slice'
+			}
+		});
+
+		function handleComplete() {
+			document.getElementById('wrapper').style.opacity = '';
+			wrapper.style.transition = 'opacity 3s ease-in-out 0s';
+			wrapper.style.opacity = 0;
+
+			setTimeout(function() {
+				document.body.removeChild(wrapper);
+			}, 3000);
+		}
+
+		anim.addEventListener('complete', handleComplete);
+	})();
+</script>
+<div class="wrapper" id="wrapper" style="opacity: 0;">
 	<header class="header" id="header">
 	<div class="header__container">
 		<div class="header__layout">
