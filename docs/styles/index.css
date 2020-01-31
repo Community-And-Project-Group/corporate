@@ -6371,23 +6371,15 @@ body {
     align-items: center;
     justify-content: center;
     width: 50%;
-    min-height: 200px;
-    padding: 20px;
 }
 
 .brand__post-list li:first-child {
     margin-right: 30px;
-    border: 1px solid #eeeeee;
 }
 
-.brand__post-list li:last-child {
-    background-color: #093051;
-}
-
-.brand__post-list li img {
+.brand__post-list li svg {
     display: block;
     width: 100%;
-    max-width: 240px;
 }
 
 .brand__colors-list li {
