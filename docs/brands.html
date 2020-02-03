@@ -32,7 +32,41 @@
     <link href="styles/index.css" rel="stylesheet">
 </head>
 <body>
+<!--<div id="anim"></div>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
+<script>
+    (function(){
+        var width = window.innerWidth;
+        var wrapper = document.getElementById('anim');
+        var breakpointName = (
+            /* sp */(width > 0 && width < 768) && 'sp' ||
+            /* md */(width > 767 && width < 992) && 'md' ||
+            /* lg */(width > 991) && 'lg'
+        );
+
+        var anim = bodymovin.loadAnimation({
+            container: wrapper,
+            animType: 'canvas',
+            path: 'top.' + breakpointName + '.json',
+            assetsPath: 'images/top/',
+            rendererSettings: {
+                preserveAspectRatio: 'xMidYMax slice'
+            }
+        });
+
+        function handleComplete() {
+            document.getElementById('wrapper').style.opacity = '';
+            wrapper.style.transition = 'opacity 3s ease-in-out 0s';
+            wrapper.style.opacity = 0;
+
+            setTimeout(function() {
+                document.body.removeChild(wrapper);
+            }, 3000);
+        }
+
+        anim.addEventListener('complete', handleComplete);
+    })();
+</script>
 <div class="wrapper" id="wrapper">
     <header class="header" id="header">
         <div class="header__container">
@@ -282,7 +316,8 @@
                     <h3 class="brand__post-title brand__post-title_sm brand__post-title_mb35">3.
                         比率の変更や変形、無関係な効果の使用（色の変更や回転・フィルターなど）、画質を著しく下げる処理、視認性の低い配置などをしないこと</h3>
                     <div class="brand__error">
-                        <img src="images/brand/brand-error.jpg" alt="Error">
+                        <img class="pc" src="images/brand/brand-error.jpg" alt="Error">
+                        <img class="mb" src="images/brand/brand-error-sp.jpg" alt="Error">
                     </div>
                 </div>
             </div>
