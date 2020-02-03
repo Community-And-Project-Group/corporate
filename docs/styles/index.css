@@ -6387,7 +6387,11 @@ body {
 }
 
 .brand__post-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 92px;
@@ -6395,14 +6399,23 @@ body {
 
 @media (max-width: 767px) {
     .brand__post-list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         margin-bottom: 60px;
     }
 }
 
 .brand__post-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 50%;
 }
@@ -6430,14 +6443,23 @@ body {
 }
 
 .brand__colors {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 83px;
 }
 
 @media (max-width: 767px) {
     .brand__colors {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         margin-bottom: 75px;
     }
@@ -6454,8 +6476,6 @@ body {
     line-height: 30px;
     color: #fff;
     text-align: center;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
     border-radius: 50px;
     background-color: #093051;
 }
@@ -6487,7 +6507,7 @@ body {
     }
 }
 
-    .brand__table tr {
+.brand__table tr {
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -6519,7 +6539,11 @@ body {
 }
 
 .brand__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 120px;
     padding: 39px 0 50px;
@@ -6528,6 +6552,9 @@ body {
 
 @media (max-width: 767px) {
     .brand__inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
 
     }
