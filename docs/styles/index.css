@@ -6316,7 +6316,7 @@ body {
 
 @media (max-width: 767px) {
     .brands {
-        padding-top: 55px;
+        padding-top: 35px;
     }
 }
 
@@ -6326,11 +6326,12 @@ body {
     font-size: 30px;
     line-height: 48px;
     font-weight: 400;
+    color: #111;
 }
 
 @media (max-width: 767px) {
     .brand__subtitle {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         padding-top: 55px;
         font-size: 24px;
         line-height: 28px;
@@ -6342,6 +6343,14 @@ body {
     font-size: 14px;
     line-height: 2;
     font-family: brother_1816light;
+    color: #333;
+}
+
+@media (max-width: 767px) {
+    .brand__text {
+        font-size: 12px;
+        line-height: 2.5;
+    }
 }
 
 .brand__text_mb35 {
@@ -6358,16 +6367,24 @@ body {
 
 @media (max-width: 767px) {
     .brand__text.mb50 {
-        margin-bottom: 40px;
+        margin-bottom: 47px;
     }
 }
 
 .brand__post-title {
     margin-bottom: 18px;
+    font-family: brother_1816medium;
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
-    color: #333333;
+    color: #111;
+}
+
+@media (max-width: 767px) {
+    .brand__post-title {
+        font-size: 21px;
+        line-height: 25px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -6418,25 +6435,45 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     width: 50%;
+    min-height: 200px;
+    padding: 0 20px;
+    background-color: #093051;
 }
 
 @media (max-width: 767px) {
     .brand__post-list li {
         width: 100%;
-        margin: 0 0 15px;
+        min-height: 125px;
+        margin: 0 0 10px;
     }
 }
 
 .brand__post-list li:first-child {
     margin-right: 30px;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+
+.brand__post-list li:first-child svg {
+    fill: #000;
 }
 
 .brand__post-list li svg {
     display: block;
     width: 100%;
+    max-width: 240px;
+    fill: #fff;
+}
+
+@media (max-width: 767px) {
+    .brand__post-list li svg {
+        max-width: 145px;
+    }
 }
 
 .brand__colors-list li {
+    font-family: brother_1816light;
+    font-weight: 300;
     font-size: 16px;
     line-height: 30px;
     color: #111111;
@@ -6556,7 +6593,6 @@ body {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-
     }
 }
 
@@ -6565,10 +6601,13 @@ body {
 }
 
 @media (max-width: 767px) {
+    .brand__example {
+        max-width: 435px;
+        margin: 0 auto;
+    }
+
     .brand__example:first-child {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 50px;
+        margin: 0 auto 50px;
     }
 }
 
@@ -6602,6 +6641,17 @@ body {
 .brand__example-img img {
     display: block;
     width: 100%;
+}
+
+.brand__error {
+    padding: 45px 50px;
+    background-color: #fcfcfc;
+}
+
+@media (max-width: 767px) {
+    .brand__error {
+        padding: 22px 20px;
+    }
 }
 
 .brand__error img {
