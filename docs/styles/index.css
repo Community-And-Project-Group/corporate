@@ -6325,7 +6325,7 @@ body {
     padding-top: 88px;
     font-size: 30px;
     line-height: 48px;
-    font-weight: 400;
+    font-weight: 500;
     color: #111;
 }
 
@@ -6342,8 +6342,9 @@ body {
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 2;
-    font-family: brother_1816light;
+    font-family: brother_1816light, Noto Sans JP, sans-serif;
     color: #333;
+    font-weight: 300;
 }
 
 @media (max-width: 767px) {
@@ -6373,7 +6374,7 @@ body {
 
 .brand__post-title {
     margin-bottom: 18px;
-    font-family: brother_1816medium;
+    font-family: brother_1816medium, Noto Sans JP, sans-serif;
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
@@ -6384,6 +6385,11 @@ body {
     .brand__post-title {
         font-size: 21px;
         line-height: 25px;
+    }
+
+    h3.brand__post-title {
+        font-size: 13px;
+        line-height: 28px;
     }
 }
 
@@ -6472,7 +6478,7 @@ body {
 }
 
 .brand__colors-list li {
-    font-family: brother_1816light;
+    font-family: brother_1816light, Noto Sans JP, sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
@@ -6508,7 +6514,7 @@ body {
     margin-left: 97px;
     margin-top: 36px;
     padding: 20px 25px;
-    font-family: brother_1816regular;
+    font-family: brother_1816regular, Noto Sans JP, sans-serif;
     font-size: 12px;
     line-height: 30px;
     color: #fff;
@@ -6553,7 +6559,7 @@ body {
     padding: 35px 10px;
     font-size: 14px;
     line-height: 16px;
-    font-family: brother_1816light;
+    font-family: brother_1816light, Noto Sans JP, sans-serif;
     font-weight: 300;
 }
 
@@ -6613,7 +6619,7 @@ body {
 
 .brand__example-info {
     margin-bottom: 15px;
-    font-family: brother_1816light;
+    font-family: brother_1816light, Noto Sans JP, sans-serif;
     font-size: 12px;
     line-height: 16px;
     color: #221815;
