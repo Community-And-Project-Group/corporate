@@ -32,41 +32,7 @@
     <link href="styles/index.css" rel="stylesheet">
 </head>
 <body>
-<div id="anim"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
-<script>
-    (function () {
-        var width = window.innerWidth;
-        var wrapper = document.getElementById('anim');
-        var breakpointName = (
-            /* sp */(width > 0 && width < 768) && 'sp' ||
-            /* md */(width > 767 && width < 992) && 'md' ||
-            /* lg */(width > 991) && 'lg'
-        );
 
-        var anim = bodymovin.loadAnimation({
-            container: wrapper,
-            animType: 'canvas',
-            path: 'top.' + breakpointName + '.json',
-            assetsPath: 'images/top/',
-            rendererSettings: {
-                preserveAspectRatio: 'xMidYMax slice'
-            }
-        });
-
-        function handleComplete() {
-            document.getElementById('wrapper').style.opacity = '';
-            wrapper.style.transition = 'opacity 3s ease-in-out 0s';
-            wrapper.style.opacity = 0;
-
-            setTimeout(function () {
-                document.body.removeChild(wrapper);
-            }, 3000);
-        }
-
-        anim.addEventListener('complete', handleComplete);
-    })();
-</script>
 <div class="wrapper" id="wrapper">
     <header class="header" id="header">
         <div class="header__container">
@@ -190,8 +156,8 @@
 
         <section class="brands">
             <div class="container">
-                <h2 class="strong">Brand Resourses</h2>
-                <h4 class="brand__subtitle">ブランドリソース</h4>
+                <h1 class="title_left_primary">Brand Resourses</h1>
+                <h2 class="app__promo__subtitle mb40">ブランドリソース</h2>
                 <p class="brand__text mb50">
                     利用可能なロゴを利用シーンに応じてご利用いただけます。<br>
                     右クリック（副ボタン）のメニューから保存することで、SVGデータを取得できます。
@@ -490,7 +456,7 @@
                                 </a>
                             </li>
                             <li class="footer__nav-item">
-                                <a class="footer__nav-link" href="brands.html">
+                                <a class="footer__nav-link active" href="brands.html">
                                     <span class="footer__nav-link-text">Brand</span>
                                 </a>
                             </li>

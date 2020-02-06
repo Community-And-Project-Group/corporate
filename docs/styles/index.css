@@ -6320,21 +6320,13 @@ body {
     }
 }
 
-.brand__subtitle {
+.mb40 {
     margin-bottom: 40px;
-    padding-top: 88px;
-    font-size: 30px;
-    line-height: 48px;
-    font-weight: 500;
-    color: #111;
 }
 
 @media (max-width: 767px) {
-    .brand__subtitle {
+    .mb40 {
         margin-bottom: 20px;
-        padding-top: 55px;
-        font-size: 24px;
-        line-height: 28px;
     }
 }
 
