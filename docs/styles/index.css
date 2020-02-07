@@ -6452,19 +6452,14 @@ body {
     background-color: #fff;
 }
 
-.brand__post-list li:first-child svg {
-    fill: #000;
-}
-
-.brand__post-list li svg {
+.brand__post-list li img {
     display: block;
     width: 100%;
     max-width: 240px;
-    fill: #fff;
 }
 
 @media (max-width: 767px) {
-    .brand__post-list li svg {
+    .brand__post-list li img {
         max-width: 145px;
     }
 }
