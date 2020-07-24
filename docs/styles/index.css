@@ -581,7 +581,8 @@ body {
         display: block;
         width: 100%;
         height: 0;
-        padding-top: 33.63636%;
+        /*padding-top: 33.63636%;*/
+		padding-top: 50%;
         position: relative;
         overflow: hidden
     }
