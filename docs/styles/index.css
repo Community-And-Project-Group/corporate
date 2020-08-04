@@ -472,13 +472,13 @@ body {
     min-height: 1px
 }
 
-.app__promo, .app__promo_mission {
+.app__promo, .app__promo_mission, .app__promo_message {
     padding: 88px 0 90px;
     position: relative
 }
 
 @media (max-width: 767px) {
-    .app__promo, .app__promo_mission {
+    .app__promo, .app__promo_mission, .app__promo_message {
         padding: 36px 0 44px
     }
 }
@@ -506,7 +506,8 @@ body {
     font-family: Noto Sans JP, sans-serif;
     font-weight: 400;
     font-size: 40px;
-    line-height: 34px;
+    /*line-height: 34px;*/
+	/*line-height: 48px;*/
     color: #111;
     margin-top: 95px
 }
@@ -545,6 +546,17 @@ body {
         line-height: 30px;
         margin-top: 4px
     }
+}
+
+.message-txt{
+	max-width: 900px;
+	margin: 80px auto 124px;
+}
+
+@media (max-width: 767px) {
+    .message-txt{
+		margin: 30px auto 80px;
+	}
 }
 
 .app__promo__desc_custom {
@@ -620,6 +632,25 @@ body {
         -ms-transform: translateY(-15px);
         transform: translateY(-15px)
     }
+}
+
+.app__promo__img2 {
+    display: block;
+    width: 100%;
+    margin-top: 58px;
+    position: relative
+}
+
+@media (max-width: 767px) {
+    .app__promo__img2 {
+        margin-top: 17px
+    }
+}
+
+
+.app__promo__img2 img {
+    display: block;
+    width: 100%
 }
 
 .app__promo__desc-wrap {
@@ -731,6 +762,17 @@ body {
 @media (max-width: 767px) {
     .app__promo_mission .app__promo__img {
         margin-bottom: 75px
+    }
+}
+
+.app__promo_message .app__promo__img {
+    margin-bottom: 60px;
+    position: relative
+}
+
+@media (max-width: 767px) {
+    .app__promo_message .app__promo__img {
+        margin-bottom: 30px
     }
 }
 
@@ -5577,6 +5619,37 @@ body {
     .value__title {
         font-size: 20px;
         line-height: 24px
+    }
+}
+
+.message__title {
+    font-family: Noto Sans JP, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    color: #111;
+    display: block;
+    text-align: left;
+	margin-top: 40px;
+}
+
+@media (max-width: 1400px) {
+    .message__title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .message__title {
+        font-size: 20px;
+        line-height: 24px
+    }
+}
+
+@media (max-width: 767px) {
+    .message__title {
+		margin-bottom: 20px;
     }
 }
 
