@@ -1484,7 +1484,7 @@ body {
     width: 100%;
     padding: 100px 0 10px;
   }
-  
+
   .header .footer__nav-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1516,11 +1516,11 @@ body {
   .header .menu__item {
     width: 80%;
   }
-  
+
   .header .menu__link {
     padding: 23px 10px;
   }
-  
+
   .header .footer__nav-link {
     padding: 23px 10px;
     text-align: center;
@@ -6372,7 +6372,7 @@ body {
   flex-wrap: nowrap;
   width: 100%;
   padding: 41px 41px 40px;
-  
+
   background-color: #f8f8f8;
 }
 
@@ -6440,11 +6440,11 @@ body {
   width: 1px;
   height: 17px;
   background-color: #cccccc;
-  
+
   position: absolute;
   left: 0;
   top: 50%;
-  
+
   transform: translateY(-50%);
 }
 
@@ -6457,12 +6457,12 @@ body {
 .project-page-categories__link {
   display: block;
   padding: 0 61px 0 51px;
-  
+
   font-family: brother_1816medium;
   font-size: 14px;
   line-height: 1.6;
   color: #999999;
-  
+
   transition: color 0.2s;
 }
 
@@ -6501,7 +6501,7 @@ body {
   display: block;
   width: 100%;
   margin-bottom: 35px;
-  
+
   /* fixme: in design it was bold */
   font-family: brother_1816book;
   font-size: 30px;
@@ -6539,6 +6539,18 @@ body {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
+  
+  transition: opacity .3s, transform .3s;
+}
+
+:root.hover .project-page-content__item-flex:hover {
+  opacity: 0.8;
+  transform: translateY(-1%);
+}
+
+:root.hover .coming-soon .project-page-content__item-flex:hover {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 768px) {
@@ -6552,7 +6564,7 @@ body {
   width: 100%;
   padding-top: calc(788 / 1040 * 100%);
   border: 3px solid #eeeeee;
-  
+
   position: relative;
 }
 
@@ -6566,11 +6578,11 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  
+
   position: absolute;
   top: 0;
   left: 0;
-  
+
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -6614,7 +6626,7 @@ body {
   display: block;
   padding: 5px 11px 5px 8px;
   background-color: #093051;
-  
+
   font-family: brother_1816medium;
   font-size: 14px;
   line-height: 1.6;
@@ -6624,7 +6636,7 @@ body {
 .project-page-content__item-text {
   display: block;
   padding: 0 13px;
-  
+
   font-family: brother_1816regular;
   font-size: 14px;
   line-height: 1.6;
@@ -6635,7 +6647,7 @@ body {
   display: block;
   width: 100%;
   margin: 9px 0 20px;
-  
+
   /* fixme: in design sometimes it was Noto Sans CJK JP */
   font-family: brother_1816medium;
   font-size: 30px;
@@ -6646,16 +6658,16 @@ body {
 .project-page-content__item-link {
   display: inline-block;
   padding-bottom: 5px;
-  
+
   font-family: brother_1816book;
   font-size: 14px;
   line-height: 1.6;
   color: #333333;
-  
+
   position: relative;
 }
 
-.project-page-content__item-link.disabled:after {
+.coming-soon .project-page-content__item-link:after {
   display: none;
 }
 
@@ -6663,29 +6675,12 @@ body {
   content: '';
   display: inline-block;
   vertical-align: middle;
-  
+
   width: 13px;
   height: 13px;
   margin-left: 5px;
-  
+
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 26 26'%3E%3Cg id='icon' transform='translate(-5400 -5369)'%3E%3Cg id='長方形_537' data-name='長方形 537' transform='translate(5406 5369)' fill='%23fff' stroke='%23333' stroke-width='2'%3E%3Crect width='20' height='20' stroke='none'/%3E%3Crect x='1' y='1' width='18' height='18' fill='none'/%3E%3C/g%3E%3Cg id='長方形_537_のコピー' data-name='長方形 537 のコピー' transform='translate(5400 5375)' fill='%23fff' stroke='%23333' stroke-width='2'%3E%3Crect width='20' height='20' stroke='none'/%3E%3Crect x='1' y='1' width='18' height='18' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-}
-
-.project-page-content__item-link:before {
-  content: '';
-  width: 0;
-  height: 2px;
-  background-color: #333333;
-  
-  transition: width .3s;
-  
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-:root.hover .project-page-content__item-link:hover:before {
-  width: 100%;
 }
 
 .menu__item--dropdown {
@@ -6694,20 +6689,25 @@ body {
 }
 
 .menu__dropdown {
+  display: none;
   position: absolute;
   left: 0;
 
   transition: opacity 0.3s;
 }
 
+.menu__dropdown.initiated {
+  display: block;
+}
+
 .menu__dropdown--top {
-  padding: 20px 0 0;
+  padding: 0 0 20px;
   top: 8px;
   transform: translate(0, -100%);
 }
 
 .menu__dropdown--bottom {
-  padding: 0 0 20px;
+  padding: 20px 0 0;
   bottom: 8px;
   transform: translate(0, 100%);
 }
@@ -6748,41 +6748,41 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .menu__dropdown--header.menu__dropdown  {
+  .menu__dropdown--header.menu__dropdown {
     opacity: 1;
     pointer-events: auto;
-  
+
     padding: 0;
     transform: translate(0, 0);
-    
+
     position: static;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
   }
-  
+
   .menu__dropdown--header .menu__dropdown-link {
     font-family: brother_1816book;
     font-size: 14px;
   }
-  
+
   .menu__dropdown--header .menu__dropdown-item.current .menu__dropdown-link {
     position: relative;
   }
-  
+
   .menu__dropdown--header .menu__dropdown-item.current .menu__dropdown-link:before {
     content: '-';
     font-family: brother_1816book;
     font-size: 14px;
-  
+
     position: absolute;
     top: 50%;
     left: 20px;
-    
+
     transform: translateY(-50%);
   }
-  
+
   .menu__dropdown--header .menu__dropdown-item + .menu__dropdown-item {
     border-top: none;
   }
