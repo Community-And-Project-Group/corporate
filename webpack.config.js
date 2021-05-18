@@ -8,9 +8,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //eslint-disable-next-line no-undef
 const isProduction = process.env.NODE_ENV === 'production';
 
-//const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
-const stylesHandler = MiniCssExtractPlugin.loader;
-
 const config = {
   entry: './src/js/index.js',
   output: {
@@ -33,7 +30,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, { loader: 'css-loader', options: { url: false } }],
+        use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { url: false } }],
       },
     ],
   },
