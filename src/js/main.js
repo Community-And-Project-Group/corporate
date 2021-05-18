@@ -32,6 +32,9 @@ function dropdownMenu() {
 
   items.forEach((item) => {
     const menu = item.querySelector('.menu__dropdown');
+
+    menu.classList.add('initiated');
+
     const enter = () => isWindowInnerWidthSM() && menu.classList.remove('closed');
     const leave = () => isWindowInnerWidthSM() && menu.classList.add('closed');
 

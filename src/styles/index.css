@@ -1484,7 +1484,7 @@ body {
     width: 100%;
     padding: 100px 0 10px;
   }
-  
+
   .header .footer__nav-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1516,11 +1516,11 @@ body {
   .header .menu__item {
     width: 80%;
   }
-  
+
   .header .menu__link {
     padding: 23px 10px;
   }
-  
+
   .header .footer__nav-link {
     padding: 23px 10px;
     text-align: center;
