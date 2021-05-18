@@ -8,7 +8,7 @@
     "editorconfig": "editorconfig-checker",
     "prettier": "prettier --write . --ignore-unknown",
     "test": "npm run editorconfig & npm run prettier & eslint",
-    "precommit": "npm run test & npm run build:prod",
+    "precommit": "npm run test",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
