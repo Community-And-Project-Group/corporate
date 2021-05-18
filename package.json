@@ -1,0 +1,56 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "editorconfig": "editorconfig-checker",
+    "prettier": "prettier --write . --ignore-unknown",
+    "test": "npm run editorconfig & npm run prettier & eslint",
+    "precommit": "npm run test & npm run build:prod",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Community-And-Project-Group/corporate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@webpack-cli/generators": "^2.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "editorconfig-checker": "^4.0.2",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^6.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "prettier": "^2.3.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "body-scroll-lock": "^2.6.4",
+    "include-media": "^1.4.9",
+    "intersection-observer": "^0.7.0",
+    "jquery": "^3.4.1",
+    "normalize-scss": "^7.0.1",
+    "objectFitPolyfill": "^2.3.0",
+    "particles.js": "^2.0.0",
+    "picturefill": "^3.0.3",
+    "rellax": "^1.10.0",
+    "rxjs": "^6.5.2",
+    "smoothscroll-polyfill": "^0.4.4"
+  }
+}
