@@ -1,5 +1,7 @@
 import './core/polyfill';
 import '../styles/index.css';
+import '../styles/project.css';
+import '../styles/dropdown-menu.css';
 
 import { boot } from './core/boot';
 import { Lazy } from './modules/lazy.module';

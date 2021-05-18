@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { DOCUMENT } from './core';
 
 function scrollToTop() {
@@ -24,26 +23,22 @@ function scrollToTop() {
   });
 }
 
-function projectTabs() {
-  const buttons = $('.project-single__tabs-link');
-  const tabs = $('.project-single__item');
+function isWindowInnerWidthSM() {
+  return window.innerWidth > 767;
+}
 
-  buttons.click((event) => {
-    const target = $(event.target).closest('.project-single__tabs-link');
-    const targetTab = $(`.project-single__item[data-tab="${target.attr('data-tab')}"]`);
+function dropdownMenu() {
+  const items = document.querySelectorAll('.menu__item--dropdown');
 
-    if (target.hasClass('current')) {
-      return false;
-    }
+  items.forEach((item) => {
+    const menu = item.querySelector('.menu__dropdown');
+    const enter = () => isWindowInnerWidthSM() && menu.classList.remove('closed');
+    const leave = () => isWindowInnerWidthSM() && menu.classList.add('closed');
 
-    buttons.filter('.current').removeClass('current');
-    target.addClass('current');
-
-    tabs.filter('.current').fadeOut().removeClass('current');
-
-    targetTab.fadeIn().addClass('current');
+    item.addEventListener('mouseenter', enter);
+    item.addEventListener('mouseleave', leave);
   });
 }
 
+dropdownMenu();
 scrollToTop();
-projectTabs();
