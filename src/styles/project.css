@@ -25,13 +25,13 @@
 
 @media screen and (max-width: 991px) {
   .project-page-categories {
-    flex-wrap: wrap;
     padding: 25px 20px 18px;
   }
 }
 
 @media screen and (max-width: 991px) {
   .project-page-categories {
+    flex-wrap: wrap;
     padding: 21px 20px 20px;
   }
 }
@@ -44,10 +44,9 @@
   color: #999999;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   .project-page-categories__title {
     width: 100%;
-    margin-bottom: 12px;
   }
 }
 
@@ -61,7 +60,6 @@
 @media screen and (max-width: 991px) {
   .project-page-categories__menu {
     padding-right: 0;
-    justify-content: space-around;
   }
 }
 
@@ -115,7 +113,7 @@
 
 @media screen and (max-width: 991px) {
   .project-page-categories__link {
-    padding: 0 40px 0 30px;
+    padding: 0 30px 0 20px;
   }
 }
 
@@ -140,7 +138,7 @@
 
 @media screen and (max-width: 768px) {
   .project-page-content {
-    padding: 36px 0 23px;
+    padding: 36px 0 74px;
   }
 }
 
