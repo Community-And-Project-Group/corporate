@@ -27,13 +27,17 @@
     "@babel/plugin-proposal-decorators": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "@webpack-cli/generators": "^2.1.0",
+    "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
+    "browserlist": "^1.0.1",
     "css-loader": "^5.2.4",
     "editorconfig-checker": "^4.0.2",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^6.0.0",
     "mini-css-extract-plugin": "^1.6.0",
+    "postcss": "^8.3.0",
+    "postcss-loader": "^5.3.0",
     "prettier": "^2.3.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.0",
@@ -52,5 +56,10 @@
     "rellax": "^1.10.0",
     "rxjs": "^6.5.2",
     "smoothscroll-polyfill": "^0.4.4"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }

@@ -23,8 +23,8 @@ function scrollToTop() {
   });
 }
 
-function isWindowInnerWidthSM() {
-  return window.innerWidth > 767;
+function isSM() {
+  return window.innerWidth <= 767;
 }
 
 function dropdownMenu() {
@@ -32,14 +32,42 @@ function dropdownMenu() {
 
   items.forEach((item) => {
     const menu = item.querySelector('.menu__dropdown');
+    const isDirectionTop = menu.classList.contains('menu__dropdown--top');
+    const isDirectionBottom = menu.classList.contains('menu__dropdown--bottom');
+    const isHeaderMenu = menu.classList.contains('menu__dropdown--header');
+
+    const open = () => {
+      if (isSM() && isHeaderMenu) return;
+
+      const { top, left, bottom } = item.getBoundingClientRect();
+
+      if (isDirectionBottom) {
+        menu.style.top = `${bottom}px`;
+      } else if (isDirectionTop) {
+        menu.style.bottom = `${window.innerHeight - top}px`;
+      }
+
+      menu.style.left = `${left}px`;
+      menu.classList.remove('closed');
+    };
+    const close = () => {
+      if (isSM() && isHeaderMenu) return;
+
+      if (isDirectionBottom) {
+        menu.style.top = '';
+      } else if (isDirectionTop) {
+        menu.style.bottom = '';
+      }
+
+      menu.style.left = '';
+
+      menu.classList.add('closed');
+    };
 
     menu.classList.add('initiated');
 
-    const enter = () => isWindowInnerWidthSM() && menu.classList.remove('closed');
-    const leave = () => isWindowInnerWidthSM() && menu.classList.add('closed');
-
-    item.addEventListener('mouseenter', enter);
-    item.addEventListener('mouseleave', leave);
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
   });
 }
 

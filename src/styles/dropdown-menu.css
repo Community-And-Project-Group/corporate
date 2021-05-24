@@ -5,8 +5,8 @@
 
 .menu__dropdown {
   display: none;
-  position: absolute;
-  left: 0;
+
+  position: fixed;
   z-index: 1000;
 
   transition: opacity 0.3s;
@@ -18,14 +18,10 @@
 
 .menu__dropdown--top {
   padding: 0 0 20px;
-  top: 8px;
-  transform: translate(0, -100%);
 }
 
 .menu__dropdown--bottom {
   padding: 20px 0 0;
-  bottom: 8px;
-  transform: translate(0, 100%);
 }
 
 .menu__dropdown.closed {
