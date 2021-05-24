@@ -1,0 +1,6 @@
+public
+dist
+node_modules
+docs/assets
+.github
+.husky

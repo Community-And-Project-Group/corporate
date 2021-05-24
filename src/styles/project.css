@@ -1,0 +1,329 @@
+.project-page {
+  padding: 39px 0 140px;
+}
+
+.project-page .project-page__title {
+  margin-bottom: 83px;
+  letter-spacing: 0.8px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page .project-page__title {
+    margin-bottom: 51px;
+    letter-spacing: 1px;
+  }
+}
+
+.project-page-categories {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 41px 41px 40px;
+
+  background-color: #f8f8f8;
+}
+
+@media screen and (max-width: 991px) {
+  .project-page-categories {
+    padding: 25px 20px 18px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .project-page-categories {
+    flex-wrap: wrap;
+    padding: 21px 20px 20px;
+  }
+}
+
+.project-page-categories__title {
+  display: block;
+  font-family: brother_1816medium;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999999;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-categories__title {
+    width: 100%;
+  }
+}
+
+.project-page-categories__menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-right: 57px;
+}
+
+@media screen and (max-width: 991px) {
+  .project-page-categories__menu {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-categories__menu {
+    flex-wrap: wrap;
+  }
+}
+
+.project-page-categories__item {
+  display: block;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-categories__item {
+    width: 50%;
+  }
+}
+
+.project-page-categories__item + .project-page-categories__item:after {
+  content: '';
+  width: 1px;
+  height: 17px;
+  background-color: #cccccc;
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-categories__item:nth-child(odd):after {
+    display: none;
+  }
+}
+
+.project-page-categories__link {
+  display: block;
+  padding: 0 61px 0 51px;
+
+  font-family: brother_1816medium;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999999;
+
+  transition: color 0.2s;
+}
+
+@media screen and (max-width: 991px) {
+  .project-page-categories__link {
+    padding: 0 30px 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-categories__link {
+    padding: 11px 0;
+    text-align: center;
+  }
+}
+
+.project-page-categories__item.current .project-page-categories__link {
+  color: #333333;
+}
+
+:root.hover .project-page-categories__link:hover {
+  color: #333333;
+}
+
+.project-page-content {
+  padding: 55px 0 90px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-content {
+    padding: 36px 0 74px;
+  }
+}
+
+.project-page-content__title {
+  display: block;
+  width: 100%;
+  margin-bottom: 35px;
+
+  /* fixme: in design it was bold */
+  font-family: brother_1816book;
+  font-size: 30px;
+  line-height: 1.6;
+  color: #111111;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-content__title {
+    display: none;
+  }
+}
+
+.project-page-content__list {
+  display: block;
+  width: 100%;
+}
+
+.project-page-content__item {
+  display: block;
+  width: 100%;
+}
+
+.project-page-content__item + .project-page-content__item {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-content__item + .project-page-content__item {
+    margin-top: 78px;
+  }
+}
+
+.project-page-content__item-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+:root.hover .project-page-content__item-flex:hover {
+  opacity: 0.8;
+  transform: translateY(-1%);
+}
+
+:root.hover .coming-soon .project-page-content__item-flex:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-content__item-flex {
+    flex-wrap: wrap;
+  }
+}
+
+.project-page-content__item-pic {
+  display: block;
+  width: 100%;
+  padding-top: calc(788 / 1040 * 100%);
+  border: 3px solid #eeeeee;
+
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-content__item-pic {
+    padding-top: calc(778 / 1040 * 100%);
+  }
+}
+
+.project-page-content__item-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.project-page-content__item-col:first-child {
+  display: block;
+  width: calc((100% / 3) * 1.42);
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-content__item-col:first-child {
+    width: 100%;
+  }
+}
+
+.project-page-content__item-col:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: calc((100% / 3) * 1.58);
+  padding-left: 80px;
+  padding-top: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-page-content__item-col:nth-child(2) {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 28px;
+  }
+}
+
+.project-page-content__item-desc {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.project-page-content__item-label {
+  display: block;
+  padding: 5px 11px 5px 8px;
+  background-color: #093051;
+
+  font-family: brother_1816medium;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.project-page-content__item-text {
+  display: block;
+  padding: 0 13px;
+
+  font-family: brother_1816regular;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.project-page-content__item-title {
+  display: block;
+  width: 100%;
+  margin: 9px 0 20px;
+
+  /* fixme: in design sometimes it was Noto Sans CJK JP */
+  font-family: brother_1816medium;
+  font-size: 30px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.project-page-content__item-link {
+  display: inline-block;
+  padding-bottom: 5px;
+
+  font-family: brother_1816book;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+
+  position: relative;
+}
+
+.coming-soon .project-page-content__item-link:after {
+  display: none;
+}
+
+.project-page-content__item-link:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 13px;
+  height: 13px;
+  margin-left: 5px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 26 26'%3E%3Cg id='icon' transform='translate(-5400 -5369)'%3E%3Cg id='長方形_537' data-name='長方形 537' transform='translate(5406 5369)' fill='%23fff' stroke='%23333' stroke-width='2'%3E%3Crect width='20' height='20' stroke='none'/%3E%3Crect x='1' y='1' width='18' height='18' fill='none'/%3E%3C/g%3E%3Cg id='長方形_537_のコピー' data-name='長方形 537 のコピー' transform='translate(5400 5375)' fill='%23fff' stroke='%23333' stroke-width='2'%3E%3Crect width='20' height='20' stroke='none'/%3E%3Crect x='1' y='1' width='18' height='18' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
